@@ -1,30 +1,30 @@
-body{
+.ChromeTrap-body{
   font-family: georgia, sans-serif;
   min-width: 14em;
 }
-.logo{
+.ChromeTrap-logo{
   float: left;
 }
-.header {
+.ChromeTrap-header {
   font-size: 1.2em;
   font-family: georgia, sans-serif;
   margin: 0;
   padding: .75em 1em;
 }
-.header:after{
+.ChromeTrap-header:after{
   clear:both;
 }
-.error {
+.ChromeTrap-error {
   color: #cc0000;
 }
-a {
+.ChromeTrap-body a {
   color: #347983;
   text-decoration: underline;
 }
-a:hover {
+.ChromeTrap-body a:hover {
   color: #7cc576;
 }
-button, input[type='submit']{
+.ChromeTrap-body button, .ChromeTrap-body input[type='submit']{
   background: #ff7443;
   padding: .25em;
   color: #fff;
@@ -35,14 +35,14 @@ button, input[type='submit']{
   margin: 1em 0;
   font-size:.9em;
 }
-.resetLink {
+.ChromeTrap-resetLink {
   font-size: .8em;
 }
-.love {
+.ChromeTrap-love {
   font-size: .8em;
   color: #666;
 }
-.queryInput{
+.ChromeTrap-queryInput{
   padding: 5px;
   font-size: 1.1em;
   color: #999990;
@@ -53,7 +53,7 @@ button, input[type='submit']{
   box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
   width: 100%;
 }
-.tokenInput, textarea{
+.ChromeTrap-tokenInput, textarea{
   padding: 5px;
   font-size: .95em;
   color: #999990;
@@ -64,17 +64,17 @@ button, input[type='submit']{
   box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
   width: 100%;
 }
-.ref {
+.ChromeTrap-ref {
   font-size: .8em;
   color: #222;
   width: 100%;
   margin: .5em 0;
 }
-.note {
+.ChromeTrap-note {
   font-size: .75em;
   color: #666;
 }
-.capture{
+.ChromeTrap-capture{
   color: #666;
   font-style: italic;
   text-overflow: ellipsis;

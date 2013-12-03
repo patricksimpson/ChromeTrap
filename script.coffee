@@ -1,6 +1,5 @@
 storage = chrome.storage.sync
 $("#setTokenButton").bind "click", ->
-  saveToken()
   false
 
 $("#deleteToken").bind "click", ->
@@ -8,6 +7,7 @@ $("#deleteToken").bind "click", ->
   false
 
 $("#tokenNotSet").submit (event) ->
+  saveToken()
   event.preventDefault()
   
 $("#solution").bind "keyup", ->

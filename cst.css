@@ -1,6 +1,10 @@
-label{
+label {
   display:block;
 }
 .header {
   font-size: 1.2em;
+  font-family: georgia, sans-serif;
+}
+.error {
+  color: #cc0000;
 }

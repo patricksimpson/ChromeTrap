@@ -1,9 +1,8 @@
-<style href="cst.css" rel="stylesheet"></style>
 <h1 class="header">SteelTrap</h1>
 <form id="tokenNotSet" action="#" method="GET">
+  <p id="tokenSetError" class="error" style="display:none;"></p>
   <label>API Key</label>
   <input type="text" name="token" id="newToken">
-  <p id="tokenSetError" style="display:none;">Error setting token</p>
   <button id="setTokenButton">Set API Key</button>
 </form>
 <form action="http://steeltrap.co/api/v1/entries" method="post" id="tokenSet" style="display:none;">

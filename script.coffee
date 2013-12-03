@@ -9,7 +9,22 @@ $("#deleteToken").bind "click", ->
 
 $("#tokenNotSet").submit (event) ->
   event.preventDefault()
-
+  
+$("#solution").bind "keyup", ->
+  if($(this).val() != "")
+    $("#unsolved").prop "checked",true
+    $("#solved").val("true")
+  else
+    $("#unsolved").prop "checked",false
+    $("#solved").val("")
+    
+$("#unsolved").bind "change", ->
+  console.log("The val is:", $("#unsolved").attr("checked"))
+  if($(this).is(':checked'))
+    $("#solved").val("true")
+  else
+    $("#solved").val("")
+    
 getToken = ->
   console.log "getting token"
   storage.get "steelTrapAPIToken", (data) ->

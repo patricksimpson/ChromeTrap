@@ -13,8 +13,10 @@
   <label for="question">Question:</label>
   <input type="text" name="query" id="question" class="queryInput" placeholder="What is your question?">
   <p class="ref">Reference URL: <span class="capture" id="url_capture"></span></p>
-  <p><label for="solved">Solved?</label><select name="solved" id="solved"><option value="true">True</option><option value="">False</option></p>
-  <textarea name="solution" id="solution" placeholder="Answer"></textarea>
+  <label for="solution">Solution </label>:
+  <textarea name="solution" id="solution"></textarea>
+  <input type="checkbox" name="unsolved" id="unsolved"><label for="unsolved">Solved?</label>
+  <input type="hidden" value="" name="solved" id="solved">
   <input type="submit" value="Save">
   <p><a href="#deleteToken" id="deleteToken" class="resetLink">Reset API Key</a>
 </form>

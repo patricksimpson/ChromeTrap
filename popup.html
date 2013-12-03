@@ -1,0 +1,22 @@
+<style href="cst.css" rel="stylesheet"></style>
+<h1 class="header">SteelTrap</h1>
+<form id="tokenNotSet" action="#" method="GET">
+  <label>API Key</label>
+  <input type="text" name="token" id="newToken">
+  <p id="tokenSetError" style="display:none;">Error setting token</p>
+  <button id="setTokenButton">Set API Key</button>
+</form>
+<form action="http://steeltrap.co/api/v1/entries" method="post" id="tokenSet" style="display:none;">
+  <input type="hidden" name="reference_url" id="cst__refurl" value="">
+  <input type="hidden" name="token" id="token">
+  <p>
+    <label for="question">Question</label>
+    <input type="text" name="query" id="question">
+  </p>
+  <p>
+    <input type="submit" value="Save">
+  </p>
+  <p><a href="#deleteToken" id="deleteToken">Reset API Key</a>
+</form>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>

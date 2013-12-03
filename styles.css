@@ -53,7 +53,7 @@ button, input[type='submit']{
   box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
   width: 100%;
 }
-.tokenInput{
+.tokenInput, textarea{
   padding: 5px;
   font-size: .95em;
   color: #999990;
@@ -63,4 +63,20 @@ button, input[type='submit']{
   -webkit-box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
   box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
   width: 100%;
+}
+.ref {
+  font-size: .8em;
+  color: #222;
+  width: 100%;
+  margin: 0;
+  margin-top: .5em;
+}
+.capture{
+  color: #666;
+  font-style: italic;
+  text-overflow: ellipsis;
+  width: 15em;
+  display: block;
+  height: 16px;
+  overflow-x: hidden;
 }

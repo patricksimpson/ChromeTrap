@@ -5,14 +5,16 @@
   <label>API Key</label>
   <input type="text" name="token" id="newToken" class="tokenInput">
   <button id="setTokenButton">Set API Key</button>
-  <span class="love">You must have a <a href="http://steeltrap.co" target="_blank">steeltrap.co</a> account to gain access. Please <a href="http://steeltrap.co/users/sign_up" target="_blank">sign up</a> otherwise.</span>
+  <span class="love">You must have a <a href="http://steeltrap.co/profile" target="_blank">steeltrap.co</a> account to gain access. Please <a href="http://steeltrap.co/users/sign_up" target="_blank">sign up</a> otherwise.</span>
 </form>
 <form action="http://steeltrap.co/api/v1/entries" method="post" id="tokenSet" style="display:none;">
-  <span class="capture" id="url_capture"></span>
   <input type="hidden" name="reference_url" id="cst__refurl" value="">
   <input type="hidden" name="token" id="token">
   <label for="question">Question:</label>
   <input type="text" name="query" id="question" class="queryInput" placeholder="What is your question?">
+  <p class="ref">Reference URL: <span class="capture" id="url_capture"></span></p>
+  <p><label for="solved">Solved?</label><select name="solved" id="solved"><option value="true">True</option><option value="">False</option></p>
+  <textarea name="solution" id="solution" placeholder="Answer"></textarea>
   <input type="submit" value="Save">
   <p><a href="#deleteToken" id="deleteToken" class="resetLink">Reset API Key</a>
 </form>

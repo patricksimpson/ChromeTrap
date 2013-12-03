@@ -1,6 +1,6 @@
 storage = chrome.storage.sync
 $("#setTokenButton").bind "click", ->
-  false
+  true 
 
 $("#deleteToken").bind "click", ->
   deleteToken()

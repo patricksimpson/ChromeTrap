@@ -10,7 +10,7 @@
               "48": "icon_48.png",
              "128": "icon_128.png" },
    "content_scripts": [ {
-      "css": [ "cst.css" ],
+      "css": [ "styles.css" ],
       "matches": [ "http://*/*", "https://*/*" ]
    } ],
    "description": "A quick way to capture a URL to steeltrap.co",

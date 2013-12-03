@@ -1,0 +1,66 @@
+body{
+  font-family: georgia, sans-serif;
+  min-width: 14em;
+}
+.logo{
+  float: left;
+}
+.header {
+  font-size: 1.2em;
+  font-family: georgia, sans-serif;
+  margin: 0;
+  padding: .75em 1em;
+}
+.header:after{
+  clear:both;
+}
+.error {
+  color: #cc0000;
+}
+a {
+  color: #347983;
+  text-decoration: underline;
+}
+a:hover {
+  color: #7cc576;
+}
+button, input[type='submit']{
+  background: #ff7443;
+  padding: .25em;
+  color: #fff;
+  border-radius: 3px;
+  font-family: sans-serif;
+  text-decoration: none;
+  width: 100%;
+  margin: 1em 0;
+  font-size:.9em;
+}
+.resetLink {
+  font-size: .8em;
+}
+.love {
+  font-size: .8em;
+  color: #666;
+}
+.queryInput{
+  padding: 5px;
+  font-size: 1.1em;
+  color: #999990;
+  font-family: georgia, sans-serif;
+  border-radius: 3px;
+  border: 1px solid #c6c6bd;
+  -webkit-box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
+  box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
+  width: 100%;
+}
+.tokenInput{
+  padding: 5px;
+  font-size: .95em;
+  color: #999990;
+  font-family: georgia, sans-serif;
+  border-radius: 3px;
+  border: 1px solid #c6c6bd;
+  -webkit-box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
+  box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
+  width: 100%;
+}

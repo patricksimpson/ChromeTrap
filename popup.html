@@ -1,21 +1,21 @@
-<h1 class="header">SteelTrap</h1>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<img src="icon_48.png" alt="Chrome Trap" title="Chrome Trap" class="logo"><h1 class="header">Chrome Trap</h1>
 <form id="tokenNotSet" action="#" method="GET">
   <p id="tokenSetError" class="error" style="display:none;"></p>
   <label>API Key</label>
-  <input type="text" name="token" id="newToken">
+  <input type="text" name="token" id="newToken" class="tokenInput">
   <button id="setTokenButton">Set API Key</button>
+  <span class="love">You must have a <a href="http://steeltrap.co" target="_blank">steeltrap.co</a> account to gain access. Please <a href="http://steeltrap.co/users/sign_up" target="_blank">sign up</a> otherwise.</span>
 </form>
 <form action="http://steeltrap.co/api/v1/entries" method="post" id="tokenSet" style="display:none;">
+  <span class="capture" id="url_capture"></span>
   <input type="hidden" name="reference_url" id="cst__refurl" value="">
   <input type="hidden" name="token" id="token">
-  <p>
-    <label for="question">Question</label>
-    <input type="text" name="query" id="question">
-  </p>
-  <p>
-    <input type="submit" value="Save">
-  </p>
-  <p><a href="#deleteToken" id="deleteToken">Reset API Key</a>
+  <label for="question">Question:</label>
+  <input type="text" name="query" id="question" class="queryInput" placeholder="What is your question?">
+  <input type="submit" value="Save">
+  <p><a href="#deleteToken" id="deleteToken" class="resetLink">Reset API Key</a>
 </form>
+<p class="love">Powered by <a href="http://steeltrap.co" target="_blank">steeltrap.co</a>.</p>
 <script src="jquery.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>

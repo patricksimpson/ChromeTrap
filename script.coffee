@@ -27,11 +27,13 @@ checkToken = (token) ->
     chrome.tabs.getSelected null, (tab) ->
       tablink = tab.url
       $("#cst__refurl").val tablink
+      $("#url_capture").text tablink
 
   else
     $("#tokenNotSet").css "display", "block"
     $("#tokenSet").css "display", "none"
     $("#tokenSetError").css "display", "block"
+    $("#tokenSetError").text "Api Key not set, please enter a valid Api Key."
 
 saveToken = ->
   val = $("#newToken").val()

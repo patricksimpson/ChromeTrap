@@ -19,21 +19,18 @@ $("#solution").bind "keyup", ->
     $("#solved").val("")
     
 $("#unsolved").bind "change", ->
-  console.log("The val is:", $("#unsolved").attr("checked"))
   if($(this).is(':checked'))
     $("#solved").val("true")
   else
     $("#solved").val("")
     
 getToken = ->
-  console.log "getting token"
   storage.get "steelTrapAPIToken", (data) ->
     data.steelTrapAPIToken
     checkToken data.steelTrapAPIToken
 
 
 checkToken = (token) ->
-  console.log token
   if token and token isnt ""
     $("#tokenNotSet").css "display", "none"
     $("#tokenSet").css "display", "block"
@@ -57,7 +54,6 @@ saveToken = ->
   false
 
 deleteToken = ->
-  console.log "deleting local storage!"
   storage.remove "steelTrapAPIToken"
   checkToken()
 

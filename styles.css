@@ -53,7 +53,7 @@
   box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.18);
   width: 100%;
 }
-.ChromeTrap-tokenInput, textarea{
+.ChromeTrap-tokenInput, .ChromeTrap-body textarea{
   padding: 5px;
   font-size: .95em;
   color: #999990;

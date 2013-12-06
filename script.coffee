@@ -77,6 +77,14 @@ $("#unsolved").bind "change", ->
   else
     $("#solved").val("")
     storage.set steelTrapSolved: "false"
+
+$("#private").bind "change", ->
+  if($(this).is(':checked'))
+    $("#public").val("true")
+    storage.set steelTrapPrivate: "true"
+  else
+    $("#public").val("false")
+    storage.set steelTrapPrivate: "false"
     
 getToken = ->
   storage.get "steelTrapAPIToken", (data) ->
@@ -100,7 +108,14 @@ checkToken = (token) ->
     storage.get "steelTrapSolved", (data) ->
       if(data.steelTrapSolved == "true")
         $("#unsolved").prop "checked",true
-      $("#solved").val(data.steelTrapSolved)  
+      $("#solved").val(data.steelTrapSolved)
+    storage.get "steelTrapPrivate", (data) ->
+      if(data.steelTrapPrivate == "true")
+        $("#private").prop "checked",true
+        $("#public").val("true")
+      else
+        $("#private").prop "checked",false
+        $("#public").val("false")
 
   else
     $("#tokenNotSet").css "display", "block"

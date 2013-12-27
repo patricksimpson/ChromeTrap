@@ -22,5 +22,6 @@
    "permissions": [ "\u003Call_urls\u003E", "tabs", "storage"],
    "update_url": "http://clients2.google.com/service/update2/crx",
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-   "version": "0.1.7"
+   "options_page": "options.html",
+   "version": "0.2.0"
 }

@@ -1,6 +1,18 @@
+.ChromeTrapOptions-body {
+  background-color: #f1f1e8;
+  font-color: #444;
+  font-family: georgia;
+  font-size: .9em;
+  line-height: 1.3em;
+}
+
 .ChromeTrap-body{
   font-family: georgia, sans-serif;
   min-width: 14em;
+}
+.ChromeTrapOptions-wrapper {
+  max-width: 50em;
+  margin: 0 auto;
 }
 .ChromeTrap-logo{
   float: left;

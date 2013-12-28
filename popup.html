@@ -15,6 +15,7 @@
   <input type="text" name="token" id="newToken" class="ChromeTrap-tokenInput">
   <button id="setTokenButton">Set API Key</button>
   <span class="ChromeTrap-love">You must have a <a href="http://steeltrap.co/profile" target="_blank">steeltrap.co</a> account to gain access. Please <a href="http://steeltrap.co/users/sign_up" target="_blank">sign up</a> otherwise.</span>
+  <span><a href="options.html" target="_blank" id="settingsPage" class="ChromeTrap-resetLink">Settings</a></span>
 </form>
 <form action="#" method="post" id="tokenSet" style="display:none;">
   <p id="error" class="ChromeTrap-error" style="display:none;"></p>
@@ -25,19 +26,23 @@
   <p class="ChromeTrap-ref">Reference URL: <span class="ChromeTrap-capture" id="url_capture"></span></p>
   <label for="solution">Solution </label>:
   <textarea name="solution" id="solution"></textarea>
-  <input type="checkbox" name="unsolved" id="unsolved"><label for="unsolved">Solved?</label>
-  <input type="hidden" value="" name="solved" id="solved">
-  <input type="checkbox" name="private" id="private" checked="checked"><label for="private">Public?</label>
-  <input type="hidden" value="true" name="public" id="public">
+  <span id="CT-field-solved">
+    <input type="checkbox" name="unsolved" id="unsolved"><label for="unsolved">Solved?</label>
+    <input type="hidden" value="" name="solved" id="solved">
+  </span>
+  <span id="CT-field-public">
+    <input type="checkbox" name="private" id="private" checked="checked"><label for="private">Public?</label>
+    <input type="hidden" value="true" name="public" id="public">
+  </span>
   <input type="submit" value="Save">
-  <p><a href="#deleteToken" id="deleteToken" class="ChromeTrap-resetLink">Reset API Key</a>
+  <span><a href="options.html" target="_blank" id="settingsPage" class="ChromeTrap-resetLink">Settings</a></span>
 </form>
 <div id="success" style="display:none;">
   <h4>Saved Successfully</h4>
   <p id="messageBox" class="ChromeTrap-message"></p>
 </div>
 <p class="ChromeTrap-love"><a href="#" class="ChromeTrap-clearMe">Clear Form</a> | <a href="#" class="ChromeTrap-closeMe">Close Window</a>
-<p class="ChromeTrap-love">Powered by <a href="http://steeltrap.co" target="_blank">steeltrap.co</a>.</p>
+<p class="ChromeTrap-love" style="width:224px;">Powered by <a href="http://steeltrap.co" target="_blank">steeltrap.co</a>.</p>
 </div>
 <script src="jquery.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>

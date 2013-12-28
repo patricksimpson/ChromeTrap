@@ -23,15 +23,17 @@
   <input type="hidden" name="token" id="token">
   <label for="question">Question:</label>
   <input type="text" name="query" id="question" class="ChromeTrap-queryInput" placeholder="What is your question?">
-  <p class="ChromeTrap-ref">Reference URL: <span class="ChromeTrap-capture" id="url_capture"></span></p>
-  <label for="solution">Solution </label>:
-  <textarea name="solution" id="solution"></textarea>
+  <p class="ChromeTrap-ref" id="CT-field-urlref">Reference URL: <span class="ChromeTrap-capture" id="url_capture"></span></p>
+  <span id="CT-field-solution">
+    <label for="solution">Solution </label>:
+    <textarea name="solution" id="solution"></textarea>
+  </span>
   <span id="CT-field-solved">
     <input type="checkbox" name="unsolved" id="unsolved"><label for="unsolved">Solved?</label>
     <input type="hidden" value="" name="solved" id="solved">
   </span>
   <span id="CT-field-public">
-    <input type="checkbox" name="private" id="private" checked="checked"><label for="private">Public?</label>
+    <input type="checkbox" name="private" id="private"><label for="private">Public?</label>
     <input type="hidden" value="true" name="public" id="public">
   </span>
   <input type="submit" value="Save">

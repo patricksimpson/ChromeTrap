@@ -9,12 +9,14 @@ ChromeTrapGetOptions = ->
       ChromeTrapOptions =
         "CT-opt-public": true
         "CT-opt-autosolved": true
+        "CT-opt-show-urlref": true
         "CT-opt-show-public": true
         "CT-opt-show-solved": true
         "CT-opt-show-solution": true
         "CT-opt-show-deck-input": true
         "CT-opt-show-tag-input": true
       storage.set chromeTrapOptions: ChromeTrapOptions
+    $("#CT-opt-show-urlref").prop("checked", ChromeTrapOptions['CT-opt-show-urlref'])
     $("#CT-opt-public").prop("checked", ChromeTrapOptions['CT-opt-public'])
     $("#CT-opt-autosolved").prop("checked", ChromeTrapOptions['CT-opt-autosolved'])
     $("#CT-opt-show-public").prop("checked", ChromeTrapOptions['CT-opt-show-public'])
@@ -37,6 +39,10 @@ ChromeTrapOptionsBindings = ->
     )
   $("#CT-opt-show-public").bind("change", ->
     ChromeTrapOptions['CT-opt-show-public'] = $(this).prop "checked"
+    storage.set chromeTrapOptions: ChromeTrapOptions
+    )
+  $("#CT-opt-show-urlref").bind("change", ->
+    ChromeTrapOptions['CT-opt-show-urlref'] = $(this).prop "checked"
     storage.set chromeTrapOptions: ChromeTrapOptions
     )
   $("#CT-opt-show-solved").bind("change", ->

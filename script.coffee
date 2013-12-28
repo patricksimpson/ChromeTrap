@@ -1,4 +1,5 @@
 ChromeTrapTimeout = null
+ChromeTrapAutoSolved = true
 storage = chrome.storage.sync
 
 init = ->
@@ -16,7 +17,16 @@ ChromeTrapDoOptions = (options)->
     $("#CT-field-public").css("display", "none")
   if(!options['CT-opt-show-solved'])
     $("#CT-field-solved").css("display", "none")
-    
+  if(!options['CT-opt-show-solution'])
+    $("#CT-field-solution").css("display", "none")
+  if(!options['CT-opt-show-urlref'])
+    $("#CT-field-urlref").css("display", "none")
+  console.log(options['CT-opt-autosolved'])
+  ChromeTrapAutoSolved = options['CT-opt-autosolved']
+  console.log(ChromeTrapAutoSolved)
+  $("#private").prop "checked", options['CT-opt-public']
+  
+     
 ChromeTrapLameWindowClose = ->
   window.close()
 ChromeTrapClearData = ->
@@ -27,6 +37,7 @@ ChromeTrapClearData = ->
   storage.remove "steelTrapQuestion"
   storage.remove "steelTrapSolution"
   storage.remove "steelTrapSolved"
+  storage.remove "steelTrapPrivate"
   
 $("#setTokenButton").bind "click", ->
   true 
@@ -78,22 +89,26 @@ $("#solution").bind "change keyup", ->
   storage.set steelTrapSolution: val
 
 $("#solution").bind "keyup", ->
-  if($(this).val() != "")
-    $("#unsolved").prop "checked",true
-    $("#solved").val("true")
-    storage.set steelTrapSolved: "true"
-  else
-    $("#unsolved").prop "checked",false
-    $("#solved").val("")
-    storage.set steelTrapSolved: "false"
+  console.log(ChromeTrapAutoSolved)
+  if(ChromeTrapAutoSolved)
+    if($(this).val() != "")
+      $("#unsolved").prop "checked",true
+      $("#solved").val("true")
+      storage.set steelTrapSolved: "true"
+    else
+      $("#unsolved").prop "checked",false
+      $("#solved").val("")
+      storage.set steelTrapSolved: "false"
     
 $("#unsolved").bind "change", ->
-  if($(this).is(':checked'))
-    $("#solved").val("true")
-    storage.set steelTrapSolved: "true"
-  else
-    $("#solved").val("")
-    storage.set steelTrapSolved: "false"
+  console.log(ChromeTrapAutoSolved)
+  if(ChromeTrapAutoSolved)
+    if($(this).is(':checked'))
+      $("#solved").val("true")
+      storage.set steelTrapSolved: "true"
+    else
+      $("#solved").val("")
+      storage.set steelTrapSolved: "false"
 
 $("#private").bind "change", ->
   if($(this).is(':checked'))
